@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Score Calculator for Zama Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>📊 Final Score Calculator</h2>
+
+      <div class="form-row">
+        <div class="input-block">
+          <label for="posts">Number of Posts</label>
+          <input type="number" id="posts" placeholder="e.g. 10" value="10" />
+        </div>
+
+        <div class="input-block">
+          <label for="smartFollowers">Smart Followers</label>
+          <input
+            type="number"
+            id="smartFollowers"
+            placeholder="e.g. 5000"
+            value="5000"
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="input-block">
+          <label for="normalFollowers">Normal Followers</label>
+          <input
+            type="number"
+            id="normalFollowers"
+            placeholder="e.g. 20000"
+            value="20000"
+          />
+        </div>
+
+        <div class="input-block">
+          <label for="impressions">Impressions</label>
+          <input
+            type="number"
+            id="impressions"
+            placeholder="e.g. 80000"
+            value="80000"
+          />
+        </div>
+      </div>
+
+      <button onclick="calculateScore()">Calculate Final Score</button>
+
+      <div class="result" id="result">Final Score: —</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
