@@ -2,19 +2,21 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #74abe2, #5563de);
   color: #333;
-  min-height: 100vh;
+  height: 100vh; /* full screen height */
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  overflow: hidden; /* stops scrolling */
+  background: url(image/BCG.jpeg);
 }
 
 .calculator {
   background: #fff;
-  padding: 25px 30px;
-  border-radius: 16px;
-  max-width: 600px;
-  width: 100%;
+  padding: 40px 50px;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 90%;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -25,20 +27,22 @@ h2 {
 }
 
 .form-row {
-  display: grid;
-  gap: 15px;
-  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px; /* this creates the middle space you drew */
+  margin-bottom: 20px;
 }
 
 .input-block {
-  flex: 5;
+  flex: 1;
+  max-width: 250px; /* control input width if needed */
 }
 
 label {
   font-weight: 500;
   margin-bottom: 5px;
   display: block;
-  color: #444;
 }
 
 input {
@@ -56,20 +60,23 @@ input:focus {
 }
 
 button {
-  width: 100%;
-  padding: 12px;
+  display: block;
+  margin: 0 auto; /* centers it horizontally */
+  width: 40%; /* makes it smaller than input fields */
+  padding: 10px 0;
   background: #5563de;
-  color: #fff;
-  font-size: 16px;
+  color: white;
+  font-size: 15px;
   font-weight: 600;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 button:hover {
   background: #3c48b1;
+  transform: scale(1.03);
 }
 
 .result {
@@ -78,4 +85,25 @@ button:hover {
   font-weight: bold;
   text-align: center;
   color: #2a2a2a;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+footer a {
+  color: #fff; /* gold accent for visibility */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
