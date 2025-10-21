@@ -25,13 +25,13 @@ h2 {
 }
 
 .form-row {
-  display: flex;
+  display: grid;
   gap: 15px;
   margin-bottom: 15px;
 }
 
 .input-block {
-  flex: 1;
+  flex: 5;
 }
 
 label {
